@@ -1,5 +1,6 @@
 output
 .DS_Store
+*.pid
 *.py[cod]
 
 # C extensions
