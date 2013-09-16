@@ -10,8 +10,8 @@ TIMEZONE = 'America/Los_Angeles'
 
 DEFAULT_LANG = u'en'
 
-ARTICLE_URL = 'posts/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
+ARTICLE_URL = 'article/{slug}/'
+ARTICLE_SAVE_AS = 'article/{slug}/index.html'
 PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 AUTHOR_URL = 'author/{slug}/'
@@ -22,7 +22,8 @@ TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 
 TYPOGRIFY = True
-THEME = "themes/basic"
+# THEME = "notmyidea"
+THEME = "themes/light-roast"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -39,7 +40,7 @@ LINKS =  (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
