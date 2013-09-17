@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Articles in {{ category }} - {{ SITENAME }}{% endblock %}
+
+<!-- Additional body class -->
+{% block body_class %}category{%endblock%}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="span12">
+                    <div class="title">
+                        <h2>{{ category }}</h2>
+                        <div class="hr hr-small hr-center"><span class="hr-inner"></span></div>
+                        <p></p>
+                    </div>
+                    <div class="entry-list">
+                        {% for article in articles %}
+                        <h3 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h3>
+                        <span class="entry-date">{{ article.locale_date }}</span>
+                        <p>{{ article.summary }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}

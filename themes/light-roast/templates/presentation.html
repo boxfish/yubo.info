@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
-	<title>{% block title %}{{ article.title }}{%endblock%}</title>
+	<title>{% block title %}{{ page.title }}{%endblock%}</title>
     
     <!-- Metas -->
     {% block metadata %}
     <meta charset="utf-8" />
     <meta name="author" content="{{ AUTHOR }}">
 	
-    {% for keyword in article.keywords %}
+    {% for keyword in page.keywords %}
     <meta name="keywords" contents="{{keyword}}" />
   	{% endfor %}
 
-	{% for description in article.description %}
+	{% for description in page.description %}
 	<meta name="description" contents="{{description}}" />
 	{% endfor %}
 
-	{% for tag in article.tags %}
+	{% for tag in page.tags %}
 	<meta name="tags" contents="{{tag}}" />
 	{% endfor %}
 
@@ -55,7 +55,7 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			{% block content %}
-			{{ article.content }}
+			{{ page.content }}
     		{% endblock %}
 		</div>
 	</div>

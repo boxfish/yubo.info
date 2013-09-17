@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
+{% block metadata %}
+    {{ super() }}
+    {% for keyword in article.keywords %}
+    <meta name="keywords" contents="{{keyword}}" />
+    {% endfor %}
+
+    {% for description in article.description %}
+    <meta name="description" contents="{{description}}" />
+    {% endfor %}
+
+    {% for tag in article.tags %}
+    <meta name="tags" contents="{{tag}}" />
+    {% endfor %}
+{% endblock %}
+
+<!-- Additional body class -->
+{% block body_class %}article{%endblock%}
+
+{% block content %}
+<div class="section">
+    <div class="container">
+        <div class="content">
+        <div class="row">
+                <div class="span12">
+                    <div class="title">
+                        <h2>{{ article.title }}</h2>
+                        <div class="hr hr-small hr-center"><span class="hr-inner"></span></div>
+                        <p>{{ article.locale_date }}</p>
+                    </div>
+                    {{ article.content }}          
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+{% endblock %}

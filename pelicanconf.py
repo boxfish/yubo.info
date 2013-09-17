@@ -12,14 +12,20 @@ DEFAULT_LANG = u'en'
 
 ARTICLE_URL = 'article/{slug}/'
 ARTICLE_SAVE_AS = 'article/{slug}/index.html'
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
-AUTHOR_URL = 'author/{slug}/'
-AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+PAGE_URL = '{category}/{slug}/'
+PAGE_SAVE_AS = '{category}/{slug}/index.html'
+AUTHOR_URL = False
+AUTHOR_SAVE_AS = False
 CATEGORY_URL = 'category/{slug}/'
 CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
+
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'presentations')
+TAGS_SAVE_AS = 'tags/index.html'
+CATEGORIES_SAVE_AS = 'categories/index.html'
+ARCHIVES_SAVE_AS = 'archives/index.html'
+PRESENTATIONS_SAVE_AS = 'presentations/index.html'
 
 TYPOGRIFY = True
 # THEME = "notmyidea"

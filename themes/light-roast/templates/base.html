@@ -40,7 +40,7 @@
 </head>
 
 <!-- To change color change the class "color-1" to "color-2, color-3 ... color-6" -->
-<body class="home color-2">
+<body class="color-2 {% block body_class %}{%endblock%}">
 	<div id="header">
 		<div class="container">
 			<div class="row">
@@ -50,6 +50,10 @@
 				<div id="top-nav" class="">
 					<ul id="fixed-nav">
 					{% block top_nav %}
+						<li><a href="{{ SITEURL }}/" class="external">Home</a></li>
+						<li><a href="{{ SITEURL }}/#about" class="external">About</a></li>
+						<li><a href="{{ SITEURL }}/#work" class="external">Work</a></li>
+						<li><a href="{{ SITEURL }}/#articles" class="external">Articles</a></li>
 					{% endblock %}							
 					</ul>
 				</div>
@@ -58,6 +62,11 @@
 		</div>
 	</div><!-- End Header -->
 	
+	<div class="hero bg-fixed bg-color" id="top">
+	{% block hero %}
+    {% endblock %}
+	</div>
+
 	{% block content %}
     {% endblock %}
 	
