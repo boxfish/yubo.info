@@ -30,7 +30,7 @@
 	<!-- Styles -->
 	{% block styles %}
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/lib/reveal-js/css/reveal.min.css">
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/lib/reveal-js/css/theme/default.css" id="theme">
+	<link rel="stylesheet" href="{{ SITEURL }}/theme/lib/reveal-js/css/theme/light-roast.css" id="theme">
 
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/lib/reveal-js/lib/css/zenburn.css">
@@ -68,7 +68,7 @@
 		// Full list of configuration options available here:
 		// https://github.com/hakimel/reveal.js#configuration
 		Reveal.initialize({
-			controls: true,
+			controls: false,
 			progress: true,
 			history: true,
 			center: true,
@@ -83,7 +83,8 @@
 				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: '{{ SITEURL }}/theme/lib/reveal-js/plugin/nav-control/nav-control.js', condition: function() { return !!document.body.classList; } }
 			]
 		});
 	</script>
