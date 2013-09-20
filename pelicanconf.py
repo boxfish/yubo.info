@@ -21,11 +21,10 @@ CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'presentations')
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives')
 TAGS_SAVE_AS = 'tags/index.html'
 CATEGORIES_SAVE_AS = 'categories/index.html'
 ARCHIVES_SAVE_AS = 'archives/index.html'
-PRESENTATIONS_SAVE_AS = 'presentations/index.html'
 
 TYPOGRIFY = True
 # THEME = "notmyidea"
